@@ -1,0 +1,42 @@
+{
+    "name": "aqila-project",
+    "version": "1.0.0",
+    "description": "A modern web project built with HTML, Tailwind CSS, JavaScript, and FontAwesome",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx serve .",
+        "dev": "npx live-server .",
+        "build": "echo 'Build process would go here'",
+        "lint": "echo 'Linting would go here'",
+        "format": "echo 'Formatting would go here'"
+    },
+    "keywords": [
+        "html",
+        "css",
+        "tailwind",
+        "javascript",
+        "fontawesome",
+        "web",
+        "frontend"
+    ],
+    "author": "Aqila Project Team",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "serve": "^14.2.1"
+    },
+    "dependencies": {},
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/aqila-project.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/aqila-project/issues"
+    },
+    "homepage": "https://github.com/yourusername/aqila-project#readme"
+}

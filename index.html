@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIeMORE Agents - Noodle Innovation Project</title>
+
+    <!-- Tailwind CSS CDN (Latest Version) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome CDN (Latest Version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B35',
+                        secondary: '#2E8B57',
+                        accent: '#FFD700',
+                        warm: '#FFF8DC',
+                        dark: '#2C3E50',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out',
+                        'slide-in-right': 'slideInRight 0.8s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-warm font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-utensils text-primary text-2xl"></i>
+                        <span class="ml-2 text-xl font-bold text-dark">MIeMORE Agents</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#hero" class="text-dark hover:text-primary transition-colors">
+                        <i class="fas fa-home mr-1"></i>Home
+                    </a>
+                    <a href="#team" class="text-dark hover:text-primary transition-colors">
+                        <i class="fas fa-users mr-1"></i>Team
+                    </a>
+                    <a href="#process" class="text-dark hover:text-primary transition-colors">
+                        <i class="fas fa-cogs mr-1"></i>Process
+                    </a>
+                    <a href="#closing" class="text-dark hover:text-primary transition-colors">
+                        <i class="fas fa-heart mr-1"></i>About
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="text-dark hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded-lg p-2">
+                        <span class="sr-only">Open main menu</span>
+                        <div class="hamburger-icon">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden mobile-menu hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-200">
+                <a href="#hero"
+                    class="mobile-nav-link block px-3 py-2 text-dark hover:text-primary hover:bg-primary/10 transition-colors rounded-md">
+                    <i class="fas fa-home mr-2"></i>Home
+                </a>
+                <a href="#team"
+                    class="mobile-nav-link block px-3 py-2 text-dark hover:text-primary hover:bg-primary/10 transition-colors rounded-md">
+                    <i class="fas fa-users mr-2"></i>Team
+                </a>
+                <a href="#process"
+                    class="mobile-nav-link block px-3 py-2 text-dark hover:text-primary hover:bg-primary/10 transition-colors rounded-md">
+                    <i class="fas fa-cogs mr-2"></i>Process
+                </a>
+                <a href="#closing"
+                    class="mobile-nav-link block px-3 py-2 text-dark hover:text-primary hover:bg-primary/10 transition-colors rounded-md">
+                    <i class="fas fa-heart mr-2"></i>About
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-br from-primary via-secondary to-accent text-white py-32 pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    MIeMORE Agents
+                </h1>
+                <div class="w-24 h-1 bg-accent mx-auto mb-8"></div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-8">Noodle Innovation Project</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed">
+                        <strong>Introduction</strong><br>
+                        Welcome to the appendix page for the MIeMORE innovation process, this page is divided into
+                        several sections. We hope you find it useful!
+                    </p>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+                <button
+                    class="bg-accent hover:bg-yellow-400 text-dark font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-arrow-down mr-2"></i>Explore Our Journey
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Introduction Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-dark mb-16">
+                    Meet Our Team
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="slide-in-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <img src="src/assets/images/team.jpeg" alt="MIeMORE Agents Team"
+                            class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent rounded-2xl"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-2xl font-bold">Our Amazing Team</h3>
+                            <p class="text-lg opacity-90">Innovation in Action</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="slide-in-left" data-aos-duration="1000">
+                    <div class="space-y-6">
+                        <div
+                            class="bg-gradient-to-r from-primary to-secondary p-6 rounded-2xl text-white transform hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-dark text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">Santika Anindya Sasono</h3>
+                                    <p class="text-lg opacity-90">Grade 8F</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-secondary to-accent p-6 rounded-2xl text-white transform hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">Aqila Azalea Prasetiyo</h3>
+                                    <p class="text-lg opacity-90">Grade 8G</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-r from-accent to-primary p-6 rounded-2xl text-white transform hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">Diarra Janeeta Arie</h3>
+                                    <p class="text-lg opacity-90">Grade 8G</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Process Section -->
+    <section id="process" class="py-20 bg-gradient-to-b from-warm to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-dark mb-16">
+                    Our Innovation Process
+                </h2>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    Follow our journey through the four essential steps of creating innovative noodles
+                </p>
+            </div>
+
+            <!-- Step 1: Preparing Millet Flours -->
+            <div class="mb-20" data-aos="fade-up" data-aos-duration="1000">
+                <div class="bg-white rounded-3xl shadow-2xl p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full text-2xl font-bold mb-4">
+                            1
+                        </div>
+                        <h3 class="text-3xl font-bold text-dark mb-4">Preparing Millet Flours</h3>
+                        <p class="text-lg text-gray-600">The foundation of our innovative noodle recipe</p>
+                    </div>
+
+                    <div class="carousel-container" data-carousel="pmf">
+                        <div class="carousel-wrapper relative">
+                            <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                                <!-- Slides will be generated by JavaScript -->
+                            </div>
+                            <button
+                                class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-dots flex justify-center mt-6 space-x-2">
+                            <!-- Dots will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Preparing Breadfruit Flours -->
+            <div class="mb-20" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="bg-white rounded-3xl shadow-2xl p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-2xl font-bold mb-4">
+                            2
+                        </div>
+                        <h3 class="text-3xl font-bold text-dark mb-4">Preparing Breadfruit Flours</h3>
+                        <p class="text-lg text-gray-600">Adding nutritional value and unique texture</p>
+                    </div>
+
+                    <div class="carousel-container" data-carousel="pbf">
+                        <div class="carousel-wrapper relative">
+                            <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                                <!-- Slides will be generated by JavaScript -->
+                            </div>
+                            <button
+                                class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-dots flex justify-center mt-6 space-x-2">
+                            <!-- Dots will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Preparing Moringa Leaves -->
+            <div class="mb-20" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="bg-white rounded-3xl shadow-2xl p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 bg-accent text-dark rounded-full text-2xl font-bold mb-4">
+                            3
+                        </div>
+                        <h3 class="text-3xl font-bold text-dark mb-4">Preparing Moringa Leaves</h3>
+                        <p class="text-lg text-gray-600">Incorporating superfood benefits into our noodles</p>
+                    </div>
+
+                    <div class="carousel-container" data-carousel="pml">
+                        <div class="carousel-wrapper relative">
+                            <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                                <!-- Slides will be generated by JavaScript -->
+                            </div>
+                            <button
+                                class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-dots flex justify-center mt-6 space-x-2">
+                            <!-- Dots will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Noodle Making -->
+            <div class="mb-20" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div class="bg-white rounded-3xl shadow-2xl p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-secondary text-white rounded-full text-2xl font-bold mb-4">
+                            4
+                        </div>
+                        <h3 class="text-3xl font-bold text-dark mb-4">Noodle Making</h3>
+                        <p class="text-lg text-gray-600">The final step - bringing everything together</p>
+                    </div>
+
+                    <div class="carousel-container" data-carousel="nm">
+                        <div class="carousel-wrapper relative">
+                            <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                                <!-- Slides will be generated by JavaScript -->
+                            </div>
+                            <button
+                                class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-dark p-3 rounded-full shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-dots flex justify-center mt-6 space-x-2">
+                            <!-- Dots will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section id="closing" class="py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="zoom-in" data-aos-duration="1000">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-8">
+                    <i class="fas fa-heart text-3xl text-accent"></i>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                    Thank You for Exploring Our Journey!
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                        Thank you for visiting our MIeMORE innovation page!<br>
+                        We hope our process inspires creativity and sustainability in food innovation.
+                    </p>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div class="flex justify-center space-x-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent">3</div>
+                        <div class="text-lg">Team Members</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent">4</div>
+                        <div class="text-lg">Innovation Steps</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent">∞</div>
+                        <div class="text-lg">Possibilities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-utensils text-primary text-2xl"></i>
+                        <span class="ml-2 text-xl font-bold">MIeMORE Agents</span>
+                    </div>
+                    <p class="text-gray-400">Innovating the future of noodles through sustainable ingredients and
+                        creative processes.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition-colors">Team</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-white transition-colors">Process</a></li>
+                        <li><a href="#closing" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 MIeMORE Agents. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- JavaScript -->
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>
