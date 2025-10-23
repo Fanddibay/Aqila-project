@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="faviconCanvas" width="32" height="32" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download Favicon</button>
+    
+    <script>
+        const canvas = document.getElementById('faviconCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background circle
+        ctx.fillStyle = '#FF6B35';
+        ctx.beginPath();
+        ctx.arc(16, 16, 16, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Utensils
+        ctx.fillStyle = 'white';
+        
+        // Fork
+        ctx.fillRect(7, 8, 1.5, 16);
+        ctx.fillRect(6, 8, 3.5, 1.5);
+        ctx.fillRect(6, 10, 3.5, 1);
+        
+        // Knife
+        ctx.fillRect(12, 8, 1.5, 16);
+        ctx.beginPath();
+        ctx.moveTo(12, 8);
+        ctx.lineTo(16, 12);
+        ctx.lineTo(12, 12);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Spoon
+        ctx.beginPath();
+        ctx.ellipse(20, 9, 1.5, 1.5, 0, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillRect(18.5, 9, 3, 1.5);
+        ctx.fillRect(18.5, 10.5, 3, 13.5);
+        
+        // Accent circle
+        ctx.strokeStyle = '#FFD700';
+        ctx.lineWidth = 1;
+        ctx.globalAlpha = 0.4;
+        ctx.beginPath();
+        ctx.arc(16, 16, 14, 0, 2 * Math.PI);
+        ctx.stroke();
+        
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
